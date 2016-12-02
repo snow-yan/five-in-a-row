@@ -1,0 +1,452 @@
+*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	body,html{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	#bg{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		background-image: url(img/woodfloor.jpg);
+		display: none;
+		z-index: 10;
+		perspective: 2000px;
+	}
+	
+	#box{
+		width: 640px;
+		height: 640px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		margin: auto;
+		background-image: url(img/timg.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+		#canvas{			
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;		
+		}
+		@keyframes watch{
+			from{
+				top: -100%;
+				opacity: 0;
+			}
+			to{
+				top: 50px;
+				opacity: 1;
+			}
+		}
+		.active{
+			animation: watch 2s ease forwards;
+		}
+		#can{
+			position: absolute;
+			top:50px;
+			left: 150px;
+			border-radius: 50%;
+			background-image: url(img/3.jpg);
+			background-position: center;
+			background-size:109%;
+			
+			
+		}
+		#can1{
+			position: absolute;
+			top:50px;
+			right: 150px;
+			border-radius: 50%;
+			background-image: url(img/3.jpg);
+			background-position: center;
+			background-size:109%;
+		}
+		
+		
+		#time{
+			width: 100px;
+			height: 50px;
+			position: absolute;
+			top:240px;
+			left: -160px;
+			text-align: center;
+			line-height: 50px;			
+		}
+		#time1{
+			width: 100px;
+			height: 50px;
+			position: absolute;
+			top:260px;
+			right: -200px;
+		}
+		.over{
+			width: 400px;
+			height: 200px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
+			/*background-image: url(img/4.jpg);*/
+			background-position: center;
+			background-size: 100%;
+			display: none;
+		}
+		.start{
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			background-image: url(img/b6.jpg);
+			background-size:100% auto ;
+			background-repeat: no-repeat;
+			background-position: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+		}
+		@keyframes piao{
+			from{
+				transform:scale(0.1,0.1) rotate(0deg);
+				right: -300px;
+			}
+			to{
+				transform:scale(1,1) rotate(360deg);				
+				right: 200px;
+			}
+		}
+		.menu{
+			width: 260px;
+			height: 450px;		
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			right: -300px;
+			animation: piao 1s ease forwards .2s;			
+		}
+		.menu li{
+			text-align: center;
+			color: #111;
+			font-size: 68px;
+			font-family: "叶根友毛笔行书2.0版";
+		}
+		
+	.startgame{
+		width:200px;
+		height:50px;		
+		
+		
+		
+	}
+	@keyframes sg{
+		from{
+			top:0;
+		}
+		to{
+			top: 100%;
+		}
+	}
+	.open{
+		animation: sg .4s ease forwards;
+	}
+	@keyframes kaishi{
+		from{
+			top: 100%;
+		}
+		to{
+			top:50%;
+		}
+	}
+	
+	.startgame li{	
+		position: absolute;		
+		left: 0;
+		right: 0;
+		top: 100%;
+		margin: auto;	
+		width: 200px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		background: #000;
+		border-radius: 10px;
+		font-family: "叶根友毛笔行书2.0版";
+		font-size: 30px;
+		font-weight: bold;
+		color: #fff;
+		animation: kaishi 1s ease forwards .5s;
+		cursor: pointer;
+	}
+	.box{
+		width:640px;
+		height:640px;		
+		background: #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 100%;
+		bottom: 0;
+		margin: auto;
+		z-index: 1000;
+		display: none;
+		background-image: url(img/b7.jpg);
+		background-position:80px 700px;
+		opacity: 0;
+	}
+	@keyframes pu{
+		from{
+			opacity: 0;
+			right: 100%;
+		}
+		to{
+			opacity: 1;
+			right: 0;
+			
+		}
+	}
+	.qipu{
+		animation:pu .5s ease forwards;
+	}
+	.box img{
+		width: 100%;
+		height: 100%;
+	}
+	.box a{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	.close{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: #FFFFFF;
+		position:absolute;
+		right: -15px;
+		top: -15px;
+		z-index: 10000;
+		/*overflow: hidden;*/
+		cursor: pointer;
+		background-image: url(img/关闭.png);
+		background-size:80%;
+		background-position: center;
+	}
+	
+	.chess{
+		font-size:20px;
+	}
+	.alert{
+		width: 200px;
+		height: 200px;
+		background:#fff;
+		position: absolute;
+		top: -150%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		opacity: 0;
+		
+	}
+	.alert ul{
+		display: inline-block;
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		top: 0;
+		left:-25%;
+		
+		bottom: 0;
+		margin:auto auto;
+		background: #222222;
+		transform: scale(0,0);
+		padding-left: 50px;
+		padding-top: 60px;		
+		box-sizing: border-box;
+		border-radius: 10px;
+	}
+	.ulll{
+		animation: ull .5s ease forwards 1s;
+	}
+	@keyframes ull{
+		from{
+			transform: scale(0,0);
+		}
+		to{
+			transform: scale(1,1);
+			
+		}
+	}
+	.again{
+		animation: alert 1s ease forwards;
+	}
+	@keyframes alert{
+		0%{
+			top: -100%;
+			opacity: 0;
+		}		
+		100%{
+			top: 0;
+			background-color: rgba(0,0,0,0.4);			
+			box-shadow:0 0 10px 1000px rgba(0,0,0,0.4);
+			opacity: 1;
+
+		}
+	}
+	.alert li{
+		height: 40px;	
+		width: 120px;	
+		padding-left: 40px;
+		padding-right: 40px;
+		font-size: 20px;
+		line-height: 40px;
+		border-radius: 18px;
+		margin-bottom: 18px;
+		border: 1px solid #c27426;
+		font-weight: bold;
+		text-shadow: 0 1px 1px #444444;   
+		box-shadow: 0px 1px 4px rgba(0,0,0,.3);
+		color: #fff;
+		text-align: center;
+		background-image: linear-gradient( #D57F29,#AE6822 );
+		cursor: pointer;
+	}
+	/*.alert li span{
+		color: #fff;
+		font-weight: bold;
+		text-shadow: 0 1px 1px #444444;  
+	}*/
+	.robot{
+		position: absolute;
+		height: 120px;		
+		top: 50%;		
+		right: 170px;
+	}
+	.robot li{
+		height: 40px;
+		/*background: #C07325;*/
+		padding-left: 40px;
+		padding-right: 40px;
+		font-size: 20px;
+		line-height: 40px;
+		border-radius: 18px;
+		margin-bottom: 10px;
+		border: 1px solid #c27426;
+		font-weight: bold;
+		text-shadow: 0 1px 1px #444444;   
+		box-shadow: 0px 1px 4px rgba(0,0,0,.3);
+		color: #fff;
+		background-image: linear-gradient( #D57F29,#AE6822 );
+		cursor: pointer;
+		text-align: center;
+	}
+	.robot .p-r{
+		color: red;
+	}
+	.false{
+		width: 392px;
+		height: 220px;
+		background-image: url(img/lose.png);
+		background-position: 0 -60px;
+		position: absolute;
+		top: -150%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto auto;
+		opacity: 0;
+		z-index: 100;
+	}
+	.win{
+		width: 392px;
+		height: 220px;
+		background-image: url(img/win.png);
+		background-position: 0 -60px;
+		position: absolute;
+		top: -150%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto auto;
+		opacity: 0;
+		z-index: 100;		
+	}
+	@keyframes againone{
+		from{
+			transform: translateZ(10000px);
+			opacity: 0;
+		}
+		to{
+			transform: translateZ(0px);	
+			opacity: 1;		
+		}
+	}
+	.again1{
+		animation: againone 1s  ease  forwards;		
+	}
+	.againone{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto auto;
+		width: 100%;
+		height: 100%;
+		background:#222222;
+		transform: translateZ(10000px);
+		z-index:100;
+		
+		
+	}
+	.againone .hidden{
+		width: 500px;
+		height: 155px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto auto;
+		padding-top: 30px;
+		box-sizing: border-box;
+		text-align: center;
+	}
+	
+	.againone span{
+		height: 40px;	
+		display: inline-block;
+		padding-left: 40px;
+		padding-right: 40px;
+		font-size: 20px;
+		line-height: 40px;
+		border-radius: 18px;
+		margin-bottom: 10px;
+		border: 1px solid #c27426;
+		font-weight: bold;
+		text-shadow: 0 1px 1px #444444;   
+		box-shadow: 0px 1px 4px rgba(0,0,0,.3);
+		color: #fff;
+		background-image: linear-gradient( #D57F29,#AE6822 );
+		cursor: pointer;
+		font-family: "叶根友毛笔行书2.0版";	
+	}
