@@ -282,7 +282,7 @@ $(function(){
 	
 	
 	$(".close").on("click",function(){
-		$(".box").hide();
+		$(".box").removeClass('qipu');
 		$(canvas).on("click",handleclick)
 	})
 	

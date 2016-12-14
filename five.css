@@ -198,24 +198,25 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		right: 100%;
+		right: 0;
 		bottom: 0;
 		margin: auto;
 		z-index: 1000;
-		display: none;
+		/*display: none;*/
 		background-image: url(img/b7.jpg);
 		background-position:80px 700px;
-		opacity: 0;
+		opacity: 0;		
+		transform:scale(0,0);
+		
 	}
 	@keyframes pu{
 		from{
 			opacity: 0;
-			right: 100%;
+			transform:scale(0,0);
 		}
 		to{
 			opacity: 1;
-			right: 0;
-			
+			transform:scale(1,1);				
 		}
 	}
 	.qipu{
